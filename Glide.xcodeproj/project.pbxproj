@@ -42,7 +42,6 @@
 		3C5D9C551C625EAF00A2BD5B /* GlideClient+Encode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C531C625EAF00A2BD5B /* GlideClient+Encode.h */; };
 		3C5D9C561C625EAF00A2BD5B /* GlideClient+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C541C625EAF00A2BD5B /* GlideClient+Encode.m */; };
 		3C5D9C571C625EAF00A2BD5B /* GlideClient+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C541C625EAF00A2BD5B /* GlideClient+Encode.m */; };
-		3CE1A83A1C6BA03F0090086C /* LICENSE.md in Sources */ = {isa = PBXBuildFile; fileRef = 3CE1A8391C6BA03F0090086C /* LICENSE.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -293,7 +292,6 @@
 				3C5D9C331C62305D00A2BD5B /* GlideClient+Size.m in Sources */,
 				3C5D9C2E1C621C6F00A2BD5B /* GlideClient+Crop.m in Sources */,
 				3C5D9C471C62575F00A2BD5B /* GlideClient+Watermarks.m in Sources */,
-				3CE1A83A1C6BA03F0090086C /* LICENSE.md in Sources */,
 				3C5D9C3D1C624C9500A2BD5B /* GlideClient+Adjustments.m in Sources */,
 				3C5D9C421C62506600A2BD5B /* GlideClient+Effects.m in Sources */,
 				3C5D9C4C1C625CA500A2BD5B /* GlideClient+Background.m in Sources */,
