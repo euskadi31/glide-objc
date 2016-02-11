@@ -8,7 +8,7 @@ install:
 #    - sudo easy_install cpp-coveralls
     - bundle install --without=documentation --jobs=3 --retry=3
 script:
-    - xctool -project Glide.xcodeproj -scheme Glide build test -sdk macosx10.10 GCC_GENERATE_TEST_COVERAGE_FILES=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES
+    - xctool -project Glide.xcodeproj -scheme Glide build test -sdk macosx10.11 GCC_GENERATE_TEST_COVERAGE_FILES=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES
 after_success:
     - slather
 cache:
