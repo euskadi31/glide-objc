@@ -5,7 +5,7 @@ xcode_project: Glide.xcodeproj
 xcode_scheme: Glide
 before_install:
     - sudo easy_install cpp-coveralls
-    - sudo brew install tree
+    - brew install tree
 script:
     - xctool -project Glide.xcodeproj -scheme Glide build test -sdk macosx10.11 GCC_GENERATE_TEST_COVERAGE_FILES=YES
 after_success:
