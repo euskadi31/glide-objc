@@ -9,7 +9,7 @@ install:
 script:
     - xctool -project Glide.xcodeproj -scheme Glide build test -sdk macosx10.11 GCC_GENERATE_TEST_COVERAGE_FILES=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES
 after_success:
-    - slather coverage  --coveralls --ignore GlideTests/* --source-directory Glide/ --input-format profdata --scheme Glide Glide.xcodeproj
+    - slather coverage  --coveralls --input-format profdata --scheme Glide Glide.xcodeproj
 cache:
     directories:
         - vendor/bundle
