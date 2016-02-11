@@ -1,13 +1,16 @@
 language: objective-c
 osx_image: xcode7.2
-xcode_sdk:
-xcode_project: Glide.xcodeproj
-xcode_scheme: Glide
+#xcode_sdk:
+#xcode_project: Glide.xcodeproj
+#xcode_scheme: Glide
 before_install:
     - sudo easy_install cpp-coveralls
     - brew install tree
 script:
-    - xctool -project Glide.xcodeproj -scheme Glide build test -sdk macosx10.11 GCC_GENERATE_TEST_COVERAGE_FILES=YES
+    - xcodebuild test -project Glide.xcodeproj -scheme Glide -configuration Debug -sdk macosx10.11 GCC_GENERATE_DEBUGGING_SYMBOLS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
+#- xctool -project Glide.xcodeproj -scheme Glide build test -sdk macosx10.11 GCC_GENERATE_TEST_COVERAGE_FILES=YES
 after_success:
     - tree .
     - coveralls
+
+
