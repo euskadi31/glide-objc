@@ -10,7 +10,7 @@
 
 @implementation GlideClient (Background)
 
-- (void) setBackground:(NSString*)color {
+- (void) setBackground:(nonnull NSString*)color {
     [self.queries setObject:color forKey:@"bg"];
 }
 

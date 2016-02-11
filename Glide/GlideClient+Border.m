@@ -10,7 +10,7 @@
 
 @implementation GlideClient (Border)
 
-- (void) setBorderWithWidth:(NSUInteger)width color:(NSString*)color andType:(GlideBorderType)type {
+- (void) setBorderWithWidth:(NSUInteger)width color:(nonnull NSString*)color andType:(GlideBorderType)type {
     NSString* method = @"";
     
     switch (type) {

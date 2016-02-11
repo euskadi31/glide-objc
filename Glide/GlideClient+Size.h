@@ -33,7 +33,7 @@ typedef NS_ENUM(NSInteger, GlideFitType) {
 
 - (void) setHeight:(NSUInteger)height;
 
-- (void) setFit:(NSString*)fit;
+- (void) setFit:(nonnull NSString*)fit;
 
 - (void) setFitWithPosition:(GlideFitType)type;
 

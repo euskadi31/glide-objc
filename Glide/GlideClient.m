@@ -7,11 +7,6 @@
 //
 
 #import "GlideClient.h"
-#import "GlideClient+PixelDensity.h"
-
-#if TARGET_OS_IOS
-#import <UIKit/UIKit.h>;
-#endif
 
 @implementation GlideClient
 
@@ -20,9 +15,6 @@
 - (instancetype)init {
     if ((self = [super init])) {
         self.queries = [[NSMutableDictionary alloc] init];
-#if TARGET_OS_IOS
-        [self setDpr: [[UIScreen mainScreen] scale]];
-#endif
     }
     
     return self;
@@ -30,7 +22,7 @@
 
 - (nonnull instancetype)initWithString:(nonnull NSString *)URLString {
     if ((self = [self init])) {
-        NSURL* url = [NSURL URLWithString: URLString];
+        NSURL *url = [NSURL URLWithString: URLString];
     
         self.scheme = [url scheme];
         self.host = [url host];
@@ -38,72 +30,107 @@
         self.user = [url user];
         self.password = [url password];
         self.path = [url path];
-        
     }
     
     return self;
 }
 
+- (nonnull instancetype)initWithBase:(NSString *)BaseString {
+    if ((self = [self init])) {
+        NSURL *url = [NSURL URLWithString: BaseString];
+        
+        self.scheme = [url scheme];
+        self.host = [url host];
+        self.port = [url port];
+        self.user = [url user];
+        self.password = [url password];
+    }
+    
+    return self;
+}
+
+#pragma mark - Signature
+
+
 #pragma mark - URL Building
 
 - (nullable NSURL *)absoluteURL {
-    return [[NSURL alloc] init];
+    return [[NSURL alloc] initWithString: [self absoluteString]];
 }
 
-- (nullable NSString*)absoluteString {
-    return @"";
+- (nullable NSString *)absoluteString {
+    NSString *sign;
+    
+    if (self.signature && self.signature.length > 0) {
+        sign = [self generateSignature];
+    }
+    
+    NSMutableString *url = [[NSMutableString alloc] initWithFormat:@"%@://", [self scheme]];
+    
+    if (self.user && self.user.length > 0) {
+        [url appendString:self.user];
+        
+        if (self.password && self.password.length > 0) {
+            [url appendFormat:@":%@", self.password];
+        }
+        
+        [url appendString:@"@"];
+    }
+    
+    [url appendString:self.host];
+    
+    if (self.port && self.port.intValue != 0 && self.port.intValue != 80 && self.port.intValue != 443) {
+        [url appendFormat:@":%@", self.port.stringValue];
+    }
+    
+    [url appendString:self.path];
+    
+    if (self.queries.count > 0) {
+        [url appendFormat:@"?%@", [self queryString]];
+    }
+    
+    if (sign && sign.length > 0) {
+        [url appendFormat:@"&s=%@", sign];
+    }
+    
+    return url;
 }
 
-/*
-- (NSString *)queryStringWithPath:(NSString *)path {
+- (nullable NSString *)absoluteStringFromPath:(nonnull NSString *)path {
+    [self setPath:path];
+    
+    return [self absoluteString];
+}
+
+- (nullable NSString *)queryString {
     NSMutableArray *components = [[NSMutableArray alloc] init];
-    NSArray *keys = [[self.options allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+    
+    NSArray *keys = [[self.queries allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+    
     [keys enumerateObjectsUsingBlock:^(id key, NSUInteger idx, BOOL *stop) {
-        id value = self.options[key];
+        id value = self.queries[key];
         [components addObject:[[NSString alloc] initWithFormat:@"%@=%@", key, value]];
     }];
     
-    NSString *query = [components componentsJoinedByString:@"&"];
-    if (query.length > 0) {
-        query = [@"?" stringByAppendingString:query];
-    }
-    
-    if (self.token) {
-        NSString *input = [[NSString alloc] initWithFormat:@"%@%@%@", self.token, path, query];
-        NSString *signature = [input imgix_MD5];
-        
-        [components addObject:[[NSString alloc] initWithFormat:@"s=%@", signature]];
-        query = [components componentsJoinedByString:@"&"];
-        
-        if (query.length > 0) {
-            query = [@"?" stringByAppendingString:query];
-        }
-    }
-    
-    return query;
-}
-
-- (glide_nullable NSURL *)URLWithPath:(glide_nonnull NSString *)path {
-    NSString *scheme = self.secure ? @"https" : @"http";
-    
-    if (![path hasPrefix:@"/"]) {
-        path = [@"/" stringByAppendingString:path];
-    }
-    
-    NSString *query = [self queryStringWithPath:path];
-    
-    NSString *string = [[NSString alloc] initWithFormat:@"%@://%@%@%@", scheme, self.host, path, query];
-    return [[NSURL alloc] initWithString:string];
+    return [components componentsJoinedByString:@"&"];
 }
 
 #pragma mark - Private
 
-- (void)setBool:(BOOL)value forKey:(glide_nonnull NSString *)key {
-    if (value) {
-        self.options[key] = @"true";
-    } else {
-        [self.options removeObjectForKey:key];
+- (nullable NSString *)generateSignature {
+    if ([self.queries objectForKey:@"s"]) {
+        [self.queries removeObjectForKey:@"s"];
     }
-}*/
+    
+    NSString *sign = [[NSString alloc] initWithFormat:
+                      @"%@:%@?%@",
+                      self.signature,
+                      [GlideUtils leftTrimOfString:self.path],
+                      [self queryString]
+                      ];
+    
+    return [GlideUtils md5: sign];
+}
+
 
 @end

@@ -10,7 +10,7 @@
 
 @implementation GlideClient (Watermarks)
 
-- (void) setMarkPath:(NSString*)path {
+- (void) setMarkPath:(nonnull NSString*)path {
     [self.queries setObject:path forKey:@"mark"];
 }
 

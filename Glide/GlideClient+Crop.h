@@ -17,6 +17,9 @@
  \param y The y of image
  \return void
  */
-- (void) setCropWithWidth:(NSUInteger)width height:(NSUInteger)height x:(NSUInteger)x y:(NSUInteger)y;
+- (void) setCropWithWidth:(NSUInteger)width
+                   height:(NSUInteger)height
+                        x:(NSUInteger)x
+                        y:(NSUInteger)y;
 
 @end
