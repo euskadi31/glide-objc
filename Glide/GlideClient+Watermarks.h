@@ -30,7 +30,7 @@ typedef NS_ENUM(NSInteger, GlideMarkPosType) {
 
 @interface GlideClient (Watermarks)
 
-- (void) setMarkPath:(NSString*)path;
+- (void) setMarkPath:(nonnull NSString*)path;
 
 - (void) setMarkWidth:(NSUInteger)width;
 

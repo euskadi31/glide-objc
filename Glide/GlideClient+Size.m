@@ -24,7 +24,7 @@
     [self.queries setObject:[NSString stringWithFormat:@"%lu", (unsigned long)height] forKey:@"h"];
 }
 
-- (void) setFit:(NSString*)fit {
+- (void) setFit:(nonnull NSString*)fit {
     [self.queries setObject:fit forKey:@"fit"];
 }
 

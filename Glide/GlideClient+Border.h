@@ -16,6 +16,6 @@ typedef NS_ENUM(NSInteger, GlideBorderType) {
 
 @interface GlideClient (Border)
 
-- (void) setBorderWithWidth:(NSUInteger)width color:(NSString*)color andType:(GlideBorderType)type;
+- (void) setBorderWithWidth:(NSUInteger)width color:(nonnull NSString*)color andType:(GlideBorderType)type;
 
 @end

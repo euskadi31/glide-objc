@@ -37,14 +37,67 @@
 
 - (void)testGlide {
     
-    GlideClient *client = [[GlideClient alloc] initWithString: @"https://images.domain.tld/path/to/image.jpg"];
+    NSURL *url = [[NSURL alloc] initWithString:@"https://images.domain.tld/path/to/image.jpg"];
+    
+    GlideClient *client = [[GlideClient alloc] initWithString: [url absoluteString]];
 
     XCTAssertEqualObjects([client scheme], @"https");
     XCTAssertEqualObjects([client host], @"images.domain.tld");
     XCTAssertEqualObjects([client path], @"/path/to/image.jpg");
     
-    //XCTAssertEqual([client absoluteString], @"https://images.domain.tld/path/to/image.jpg");
+    XCTAssertEqualObjects([client absoluteString], @"https://images.domain.tld/path/to/image.jpg");
+    
+    XCTAssertEqualObjects([client absoluteURL], url);
 }
+
+- (void)testGlideWithSignature {
+    GlideClient *client = [[GlideClient alloc] initWithString: @"https://images.domain.tld/path/to/image.jpg"];
+    
+    [client setSignature:@"AzErTy123"];
+    
+    [client setWidth:200 andHeight:205];
+    
+    [[client queries] setObject:@"foo" forKey:@"s"];
+    
+    XCTAssertEqualObjects([client signature], @"AzErTy123");
+    
+    XCTAssertEqualObjects([client absoluteString], @"https://images.domain.tld/path/to/image.jpg?h=205&w=200&s=397a59f9993e5dc2d46564d6fe59a9bf");
+}
+
+- (void)testGlideWithAuth {
+    
+    GlideClient *client = [[GlideClient alloc] initWithString: @"https://user:pass@images.domain.tld/path/to/image.jpg"];
+    
+    XCTAssertEqualObjects([client scheme], @"https");
+    XCTAssertEqualObjects([client host], @"images.domain.tld");
+    XCTAssertEqualObjects([client path], @"/path/to/image.jpg");
+    XCTAssertEqualObjects([client user], @"user");
+    XCTAssertEqualObjects([client password], @"pass");
+    
+    XCTAssertEqualObjects([client absoluteString], @"https://user:pass@images.domain.tld/path/to/image.jpg");
+}
+
+- (void)testGlideWithPort {
+    
+    GlideClient *client = [[GlideClient alloc] initWithString: @"https://images.domain.tld:8080/path/to/image.jpg"];
+    
+    XCTAssertEqualObjects([client scheme], @"https");
+    XCTAssertEqualObjects([client host], @"images.domain.tld");
+    XCTAssertEqualObjects([client path], @"/path/to/image.jpg");
+    XCTAssertEqualObjects([client port], @8080);
+    
+    XCTAssertEqualObjects([client absoluteString], @"https://images.domain.tld:8080/path/to/image.jpg");
+}
+
+- (void)testBuildUrl {
+    
+    GlideClient *client = [[GlideClient alloc] initWithBase:@"https://images.domain.tld"];
+    
+    [client setWidth:200 andHeight:205];
+    
+    XCTAssertEqualObjects([client absoluteStringFromPath:@"/path/to/image.jpg"], @"https://images.domain.tld/path/to/image.jpg?h=205&w=200");
+}
+
 
 - (void)testPixelDensity {
     GlideClient *client = [[GlideClient alloc] initWithString: @"https://images.domain.tld/path/to/image.jpg"];
