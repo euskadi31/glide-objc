@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = 'Glide'
-    s.version      = '0.1.0'
+    s.version      = '1.0.0'
     s.summary      = 'Glide client for iOS & Mac OS X'
     s.author = {
         'Axel Etcheverry' => 'axel@etcheverry.biz'
