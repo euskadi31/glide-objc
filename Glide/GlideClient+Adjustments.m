@@ -55,7 +55,7 @@
         value = 100;
     }
     
-    [self.queries setObject:[NSString stringWithFormat:@"%lu", value] forKey:@"sharp"];
+    [self.queries setObject:[NSString stringWithFormat:@"%lu", (unsigned long)value] forKey:@"sharp"];
 }
 
 @end

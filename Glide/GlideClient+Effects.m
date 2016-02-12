@@ -15,7 +15,7 @@
         value = 100;
     }
     
-    [self.queries setObject:[NSString stringWithFormat:@"%lu", value] forKey:@"blur"];
+    [self.queries setObject:[NSString stringWithFormat:@"%lu", (unsigned long)value] forKey:@"blur"];
 }
 
 - (void) setPixelate:(NSUInteger)value {
@@ -23,7 +23,7 @@
         value = 1000;
     }
     
-    [self.queries setObject:[NSString stringWithFormat:@"%lu", value] forKey:@"pixel"];
+    [self.queries setObject:[NSString stringWithFormat:@"%lu", (unsigned long)value] forKey:@"pixel"];
 }
 
 - (void) setFilter:(GlideFilterType)type {

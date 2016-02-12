@@ -12,7 +12,7 @@
 @implementation GlideClient (PixelDensity)
 
 - (void) setDpr:(float)dpr {
-    [self.queries setObject:[NSString stringWithFormat:@"%lu", (NSUInteger) roundf(dpr)] forKey:@"dpr"];
+    [self.queries setObject:[NSString stringWithFormat:@"%lu", (unsigned long)roundf(dpr)] forKey:@"dpr"];
 }
 
 @end

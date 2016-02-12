@@ -27,7 +27,7 @@
             break;
     }
     
-    [self.queries setObject:[NSString stringWithFormat:@"%lu,%@,%@", width, color, method] forKey:@"border"];
+    [self.queries setObject:[NSString stringWithFormat:@"%lu,%@,%@", (unsigned long)width, color, method] forKey:@"border"];
 }
 
 @end
