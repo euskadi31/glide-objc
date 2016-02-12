@@ -1,15 +1,5 @@
 language: objective-c
 osx_image: xcode7.2
-env:
-  matrix:
-    - 'DESTINATION="platform=iOS Simulator,name=iPhone 5s,OS=9.0" CONFIGURATION="Release"       SCHEME="GlideIOS"'
-    - 'DESTINATION="platform=iOS Simulator,name=iPhone 5s,OS=9.2" CONFIGURATION="Release"       SCHEME="GlideIOS"'
-    - 'DESTINATION="platform=iOS Simulator,name=iPhone 6s,OS=9.2" CONFIGURATION="Release"       SCHEME="GlideIOS"'
-    - 'DESTINATION="platform=iOS Simulator,name=iPhone 4s"        CONFIGURATION="Release"       SCHEME="GlideIOS"     RUN_CLANG_STATIC_ANALYZER="YES"'
-    - 'DESTINATION="platform=iOS Simulator,name=iPhone 5s"        CONFIGURATION="Release"       SCHEME="GlideIOS"     RUN_CLANG_STATIC_ANALYZER="YES"'
-    - 'DESTINATION="platform=OS X"                                CONFIGURATION="Release"       SCHEME="Glide"        RUN_CLANG_STATIC_ANALYZER="YES"'
-    - 'DESTINATION="platform=OS X"                                CONFIGURATION="Debug"         SCHEME="Glide"        MACOSX_DEPLOYMENT_TARGET="10.11"'
-    - 'DESTINATION="platform=tvOS Simulator,name=Apple TV 1080p"  CONFIGURATION="Release"       SCHEME="GlideTvOS"    RUN_CLANG_STATIC_ANALYZER="YES"'
 before_install:
   - rvm use $RVM_RUBY_VERSION
   - brew update
@@ -39,6 +29,15 @@ cache:
   directories:
     - vendor/bundle
 env:
+  matrix:
+    - 'DESTINATION="platform=iOS Simulator,name=iPhone 5s,OS=9.0" CONFIGURATION="Release"       SCHEME="GlideIOS"'
+    - 'DESTINATION="platform=iOS Simulator,name=iPhone 5s,OS=9.2" CONFIGURATION="Release"       SCHEME="GlideIOS"'
+    - 'DESTINATION="platform=iOS Simulator,name=iPhone 6s,OS=9.2" CONFIGURATION="Release"       SCHEME="GlideIOS"'
+    - 'DESTINATION="platform=iOS Simulator,name=iPhone 4s"        CONFIGURATION="Release"       SCHEME="GlideIOS"     RUN_CLANG_STATIC_ANALYZER="YES"'
+    - 'DESTINATION="platform=iOS Simulator,name=iPhone 5s"        CONFIGURATION="Release"       SCHEME="GlideIOS"     RUN_CLANG_STATIC_ANALYZER="YES"'
+    - 'DESTINATION="platform=OS X"                                CONFIGURATION="Release"       SCHEME="Glide"        RUN_CLANG_STATIC_ANALYZER="YES"'
+    - 'DESTINATION="platform=OS X"                                CONFIGURATION="Debug"         SCHEME="Glide"        MACOSX_DEPLOYMENT_TARGET="10.11"'
+    - 'DESTINATION="platform=tvOS Simulator,name=Apple TV 1080p"  CONFIGURATION="Release"       SCHEME="GlideTvOS"    RUN_CLANG_STATIC_ANALYZER="YES"'
   global:
     - secure: aIjFYHUnBYysw7HAwqjIRT0Mu4vkYEqe4fbHiWDOCQih7UYjE+yq4WcMgWY6huComUUyNRNhH9a5rg5ww8llY6Zeyf/7l9SE7rKddK8adv3pGrc3Idpzb6w4ifxye+Jt0jWwqwZrA24JnB/xNhsd79430mMqlMgyGZTz+ArMz8W8B0KKqywUM/jsF/dlZLeD1jFX5Tn5Y/rSsDDhzs210WE9VXvqBYEFHaGlGTR17HPfGa05CWoivvTfGymAa5v+W2pPKlJBuL8UIRGwD83ILdBGXhHlolPLBSFV2W5GcBLpyZdFmOgoD/7nFCHdpoJXz9GL3XmTaKsMotvLMzRLmx/QriqyGrW7eu4g3p3hE/QsA3Wtgfz7gkbP2+B78HaArJ45lxaRn3foI30AkxV9d8nhuzocygmz8XWJH9cMk2/6LylhIm7yQxYad7vZHHzoIav9gI4Fwg17ONFsCAzCDl/QznqJofcGaA+G1MdecNMKvaYgSSwsaaRIq/FgNP+N9w0MDLTwq5sJQfv4dJH09tSbj+k4dRFTVF+w9q4erOx7M9VXQBMkjA5NZmkhujf+GJPzjx5Nefuenq5lCt2K3wZN8Da0lDAXQdBIjwWkFCZnFye8SoeSqnvL6wRvkyeXqkYk5yQ5u+NijkZ21XnsuEV5Kov/b2jWsJqw2bylCcw=
     - secure: n005EBUewdfHH5YK/Q8RsGzVS6Ybw8oMtypdkAi6sztRd28lSKUQz5K5EiFEKOX4immxhfw8XRHRPzLj69aXIunxWZ/cPPT/nYnUObCIi7YoN87KbLqh3IoCEMqD04Qn6kj2LBG6KlSax1MG6tcj9ZImfUCdRDq4Aoy1lDq/GBF26Y1ilhirdOYxAI7XORolwig7QWqiKdqVqq5PyaEtC8AHo2OM3uyfFqosr0FcXyjKtDQDX+X6reScehJ8eK15ztwL3a8WmUELodbRKxbDZcpONMS7GEzGWWOCiM8e8TfSvZX8XlPlo2TnkT/Du9s3EoJNvzN3b8z81iqQYGgoYHWsJPJjjbXLFCpb5X9h3G1H3lumNr975lNJNSBS2sTVteFfZkzg+iYOhuhOhr/f7/Xjh6gKk9JJzMw9ZVqf8GygV5w9NCbJK5hkTlM5SSKjkt2vEfZM4zdojwGZW5vVHz9JW8vuU089BJHxTjp8yzEsG2oyDixmbno55+uBkdVlDhb8sB6Ig/G4DzMvt8ZAbqyKIr37lOVZz6Ppd1hcjTt63s1UcHzLANK/2HBRFGh6UtHT5DlE5s1iJoMX3WzFXwtqAsbnh8vYLANrbFSS9J4Sdf+m66by3wX8jU86PPL3ga6bFAbjb/oZtSj4vll/KMg4wLLWTV0MsToQgaVa0Ko=
