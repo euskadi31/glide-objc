@@ -6,8 +6,6 @@
 //  Copyright © 2016 Axel Etcheverry. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
-
 //! Project version number for Glide.
 FOUNDATION_EXPORT double GlideVersionNumber;
 

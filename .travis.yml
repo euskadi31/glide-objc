@@ -1,11 +1,16 @@
 language: objective-c
 osx_image: xcode7.2
 before_install:
-    - brew update
-    - brew outdated xctool || brew upgrade xctool
-    - sudo easy_install cpp-coveralls
-    - brew install tree
+    - rvm use $RVM_RUBY_VERSION
+#    - brew update
+install:
+#    - brew outdated xctool || brew upgrade xctool
+    - bundle install --without=documentation --jobs=3 --retry=3
 script:
     - xctool -project Glide.xcodeproj -scheme Glide build test -sdk macosx10.11 GCC_GENERATE_TEST_COVERAGE_FILES=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES
 after_success:
-    - coveralls
+    - slather setup Glide.xcodeproj
+    - slather coverage --coveralls --input-format profdata --source-directory Glide/ --scheme Glide Glide.xcodeproj
+cache:
+    directories:
+        - vendor/bundle

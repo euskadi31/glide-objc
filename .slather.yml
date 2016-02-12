@@ -1,0 +1,5 @@
+coverage_service: coveralls
+xcodeproj: Glide.xcodeproj
+source_directory: Glide/
+ignore:
+    - GlideTests/*
