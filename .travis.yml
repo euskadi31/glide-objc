@@ -1,13 +1,15 @@
 language: objective-c
 osx_image: xcode7.2
-matrix:
-  include:
-  - osx_image: xcode7.2
-    env: GLIDE_SDK=macosx10.11 GLIDE_SCHEME=Glide
-  - osx_image: xcode7.2
-    env: GLIDE_SDK=iphonesimulator GLIDE_SCHEME=GlideIOS
-  - osx_image: xcode7.2
-    env: GLIDE_SDK=appletvos9.1 GLIDE_SCHEME=GlideTvOS
+env:
+  matrix:
+    - 'DESTINATION="platform=iOS Simulator,name=iPhone 5s,OS=9.0" CONFIGURATION="Release"       SCHEME="GlideIOS"'
+    - 'DESTINATION="platform=iOS Simulator,name=iPhone 5s,OS=9.2" CONFIGURATION="Release"       SCHEME="GlideIOS"'
+    - 'DESTINATION="platform=iOS Simulator,name=iPhone 6s,OS=9.2" CONFIGURATION="Release"       SCHEME="GlideIOS"'
+    - 'DESTINATION="platform=iOS Simulator,name=iPhone 4s"        CONFIGURATION="Release"       SCHEME="GlideIOS"     RUN_CLANG_STATIC_ANALYZER="YES"'
+    - 'DESTINATION="platform=iOS Simulator,name=iPhone 5s"        CONFIGURATION="Release"       SCHEME="GlideIOS"     RUN_CLANG_STATIC_ANALYZER="YES"'
+    - 'DESTINATION="platform=OS X"                                CONFIGURATION="Release"       SCHEME="Glide"        RUN_CLANG_STATIC_ANALYZER="YES"'
+    - 'DESTINATION="platform=OS X"                                CONFIGURATION="Debug"         SCHEME="Glide"        MACOSX_DEPLOYMENT_TARGET="10.11"'
+    - 'DESTINATION="platform=tvOS Simulator,name=Apple TV 1080p"  CONFIGURATION="Release"       SCHEME="GlideTvOS"    RUN_CLANG_STATIC_ANALYZER="YES"'
 before_install:
   - rvm use $RVM_RUBY_VERSION
   - brew update
@@ -25,9 +27,10 @@ before_script:
   - security import ./scripts/certs/dist.cer -k ~/Library/Keychains/ios-build.keychain -T /usr/bin/codesign
   - security import ./scripts/certs/dist.p12 -k ~/Library/Keychains/ios-build.keychain -P $KEY_PASSWORD -T /usr/bin/codesign
 script:
-  - xctool -project Glide.xcodeproj -scheme $GLIDE_SCHEME build test -sdk $GLIDE_SDK GCC_GENERATE_TEST_COVERAGE_FILES=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES OBJROOT=$PWD/build SYMROOT=$PWD/build
+  - open -b com.apple.iphonesimulator # Workaround https://github.com/travis-ci/travis-ci/issues/3040
+  - xctool -project Glide.xcodeproj -scheme $SCHEME build test -destination='$DESTINATION' GCC_GENERATE_TEST_COVERAGE_FILES=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES OBJROOT=$PWD/build SYMROOT=$PWD/build
 after_success:
-  - slather coverage --coveralls --input-format profdata --scheme Glide Glide.xcodeproj
+  - '[ "$CONFIGURATION" == "Debug" ] && slather coverage --coveralls --input-format profdata --scheme Glide Glide.xcodeproj'
 after_script:
   - security delete-keychain ios-build.keychain
   - rm -rf scripts/certs/dist.p12
