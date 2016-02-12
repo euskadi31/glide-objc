@@ -10,4 +10,7 @@ release:
 	@git flow release finish $(version)
 	@git push
 	@git push --tags
+	@git checkout master
+	@git push
+	@git checkout develop
 	@pod trunk push Glide.podspec
