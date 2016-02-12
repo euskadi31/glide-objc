@@ -1,16 +1,23 @@
 language: objective-c
 osx_image: xcode7.2
+matrix:
+    include:
+        - osx_image: xcode7.2
+          env: GLIDE_SDK=macosx10.11 GLIDE_SCHEME=Glide
+        - osx_image: xcode7.2
+          env: GLIDE_SDK=iphoneos9.2 GLIDE_SCHEME=GlideIOS
+        - osx_image: xcode7.2
+          env: GLIDE_SDK=appletvos9.1 GLIDE_SCHEME=GlideTvOS
 before_install:
     - rvm use $RVM_RUBY_VERSION
-#    - brew update
+    - brew update
 install:
-#    - brew outdated xctool || brew upgrade xctool
+    - brew outdated xctool || brew upgrade xctool
     - bundle install --without=documentation --jobs=3 --retry=3
 script:
-    - xctool -project Glide.xcodeproj -scheme Glide build test -sdk macosx10.11 GCC_GENERATE_TEST_COVERAGE_FILES=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES
+    - xctool -project Glide.xcodeproj -scheme $GLIDE_SCHEME build test -sdk $GLIDE_SDK GCC_GENERATE_TEST_COVERAGE_FILES=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES OBJROOT=$PWD/build SYMROOT=$PWD/build
 after_success:
-    - slather setup Glide.xcodeproj
-    - slather coverage --coveralls --input-format profdata --source-directory Glide/ --scheme Glide Glide.xcodeproj
+    - slather coverage --coveralls --input-format profdata --scheme Glide Glide.xcodeproj
 cache:
     directories:
         - vendor/bundle

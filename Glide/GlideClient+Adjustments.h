@@ -8,13 +8,17 @@
 
 #import "GlideClient.h"
 
+#if TARGET_OS_IOS
+#import <CoreGraphics/CGBase.h>
+#endif
+
 @interface GlideClient (Adjustments)
 
 - (void) setBrightness:(NSInteger)value;
 
 - (void) setContrast:(NSInteger)value;
 
-- (void) setGamma:(CGFloat)value;
+- (void) setGamma:(float)value;
 
 - (void) setSharpen:(NSUInteger)value;
 

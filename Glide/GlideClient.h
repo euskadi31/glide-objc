@@ -6,7 +6,6 @@
 //  Copyright © 2016 Axel Etcheverry. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "GlideUtils.h"
 
 @interface GlideClient : NSObject

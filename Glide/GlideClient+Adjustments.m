@@ -37,7 +37,7 @@
     [self.queries setObject:[NSString stringWithFormat:@"%ld", (long)value] forKey:@"con"];
 }
 
-- (void) setGamma:(CGFloat)value {
+- (void) setGamma:(float)value {
 
     if (value < 0.1f) {
         value = 0.1f;
@@ -46,9 +46,6 @@
     if (value > 9.99f) {
         value = 9.99f;
     }
-    
-    
-    NSLog(@"%f", value);
     
     [self.queries setObject:[NSString stringWithFormat:@"%g", value] forKey:@"gam"];
 }
