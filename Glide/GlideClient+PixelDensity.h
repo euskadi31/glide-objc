@@ -10,6 +10,6 @@
 
 @interface GlideClient (PixelDensity)
 
-- (void) setDpr:(CGFloat)dpr;
+- (void) setDpr:(float)dpr;
 
 @end

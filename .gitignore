@@ -16,7 +16,8 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
-xcshareddata/
+*.xcodeproj/project.xcworkspace/xcshareddata/*
+
 
 ## Other
 *.moved-aside
@@ -53,3 +54,6 @@ fastlane/report.xml
 fastlane/screenshots
 *.gcda
 *.gcno
+*.cer
+*.p12
+!apple.cer
