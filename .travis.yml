@@ -25,9 +25,7 @@ before_script:
   - security import ./scripts/certs/dist.cer -k ~/Library/Keychains/ios-build.keychain -T /usr/bin/codesign
   - security import ./scripts/certs/dist.p12 -k ~/Library/Keychains/ios-build.keychain -P $KEY_PASSWORD -T /usr/bin/codesign
 script:
-  - xctool -project Glide.xcodeproj -scheme $GLIDE_SCHEME build test -sdk $GLIDE_SDK
-  GCC_GENERATE_TEST_COVERAGE_FILES=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES OBJROOT=$PWD/build
-  SYMROOT=$PWD/build 'CODE_SIGN_RESOURCE_RULES_PATH=$(SDKROOT)/ResourceRules.plist'
+  - xctool -project Glide.xcodeproj -scheme $GLIDE_SCHEME build test -sdk $GLIDE_SDK GCC_GENERATE_TEST_COVERAGE_FILES=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES OBJROOT=$PWD/build SYMROOT=$PWD/build 'CODE_SIGN_RESOURCE_RULES_PATH=$(SDKROOT)/ResourceRules.plist'
 after_success:
   - slather coverage --coveralls --input-format profdata --scheme Glide Glide.xcodeproj
 after_script:
