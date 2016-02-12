@@ -16,7 +16,8 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
-xcshareddata/
+*.xcodeproj/project.xcworkspace/xcshareddata/*
+
 
 ## Other
 *.moved-aside
