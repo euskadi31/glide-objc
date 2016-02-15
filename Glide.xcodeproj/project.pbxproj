@@ -3,46 +3,46 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3C5D9C021C6125DC00A2BD5B /* Glide.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C011C6125DC00A2BD5B /* Glide.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C5D9C091C6125DC00A2BD5B /* Glide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5D9BFE1C6125DC00A2BD5B /* Glide.framework */; };
 		3C5D9C0E1C6125DC00A2BD5B /* GlideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C0D1C6125DC00A2BD5B /* GlideTests.m */; };
-		3C5D9C1A1C61269E00A2BD5B /* GlideClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C181C61269E00A2BD5B /* GlideClient.h */; };
+		3C5D9C1A1C61269E00A2BD5B /* GlideClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C181C61269E00A2BD5B /* GlideClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C5D9C1B1C61269E00A2BD5B /* GlideClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C191C61269E00A2BD5B /* GlideClient.m */; };
-		3C5D9C281C6214E000A2BD5B /* GlideClient+Orientation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C261C6214E000A2BD5B /* GlideClient+Orientation.h */; };
+		3C5D9C281C6214E000A2BD5B /* GlideClient+Orientation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C261C6214E000A2BD5B /* GlideClient+Orientation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C5D9C291C6214E000A2BD5B /* GlideClient+Orientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C271C6214E000A2BD5B /* GlideClient+Orientation.m */; };
 		3C5D9C2A1C6214E000A2BD5B /* GlideClient+Orientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C271C6214E000A2BD5B /* GlideClient+Orientation.m */; };
-		3C5D9C2D1C621C6F00A2BD5B /* GlideClient+Crop.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C2B1C621C6F00A2BD5B /* GlideClient+Crop.h */; };
+		3C5D9C2D1C621C6F00A2BD5B /* GlideClient+Crop.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C2B1C621C6F00A2BD5B /* GlideClient+Crop.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C5D9C2E1C621C6F00A2BD5B /* GlideClient+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C2C1C621C6F00A2BD5B /* GlideClient+Crop.m */; };
 		3C5D9C2F1C621C6F00A2BD5B /* GlideClient+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C2C1C621C6F00A2BD5B /* GlideClient+Crop.m */; };
-		3C5D9C321C62305D00A2BD5B /* GlideClient+Size.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C301C62305D00A2BD5B /* GlideClient+Size.h */; };
+		3C5D9C321C62305D00A2BD5B /* GlideClient+Size.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C301C62305D00A2BD5B /* GlideClient+Size.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C5D9C331C62305D00A2BD5B /* GlideClient+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C311C62305D00A2BD5B /* GlideClient+Size.m */; };
 		3C5D9C341C62305D00A2BD5B /* GlideClient+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C311C62305D00A2BD5B /* GlideClient+Size.m */; };
-		3C5D9C371C624B3900A2BD5B /* GlideClient+PixelDensity.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C351C624B3900A2BD5B /* GlideClient+PixelDensity.h */; };
+		3C5D9C371C624B3900A2BD5B /* GlideClient+PixelDensity.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C351C624B3900A2BD5B /* GlideClient+PixelDensity.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C5D9C381C624B3900A2BD5B /* GlideClient+PixelDensity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C361C624B3900A2BD5B /* GlideClient+PixelDensity.m */; };
 		3C5D9C391C624B3900A2BD5B /* GlideClient+PixelDensity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C361C624B3900A2BD5B /* GlideClient+PixelDensity.m */; };
-		3C5D9C3C1C624C9500A2BD5B /* GlideClient+Adjustments.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C3A1C624C9500A2BD5B /* GlideClient+Adjustments.h */; };
+		3C5D9C3C1C624C9500A2BD5B /* GlideClient+Adjustments.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C3A1C624C9500A2BD5B /* GlideClient+Adjustments.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C5D9C3D1C624C9500A2BD5B /* GlideClient+Adjustments.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C3B1C624C9500A2BD5B /* GlideClient+Adjustments.m */; };
 		3C5D9C3E1C624C9500A2BD5B /* GlideClient+Adjustments.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C3B1C624C9500A2BD5B /* GlideClient+Adjustments.m */; };
-		3C5D9C411C62506600A2BD5B /* GlideClient+Effects.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C3F1C62506600A2BD5B /* GlideClient+Effects.h */; };
+		3C5D9C411C62506600A2BD5B /* GlideClient+Effects.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C3F1C62506600A2BD5B /* GlideClient+Effects.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C5D9C421C62506600A2BD5B /* GlideClient+Effects.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C401C62506600A2BD5B /* GlideClient+Effects.m */; };
 		3C5D9C431C62506600A2BD5B /* GlideClient+Effects.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C401C62506600A2BD5B /* GlideClient+Effects.m */; };
-		3C5D9C461C62575F00A2BD5B /* GlideClient+Watermarks.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C441C62575F00A2BD5B /* GlideClient+Watermarks.h */; };
+		3C5D9C461C62575F00A2BD5B /* GlideClient+Watermarks.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C441C62575F00A2BD5B /* GlideClient+Watermarks.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C5D9C471C62575F00A2BD5B /* GlideClient+Watermarks.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C451C62575F00A2BD5B /* GlideClient+Watermarks.m */; };
 		3C5D9C481C62575F00A2BD5B /* GlideClient+Watermarks.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C451C62575F00A2BD5B /* GlideClient+Watermarks.m */; };
-		3C5D9C4B1C625CA500A2BD5B /* GlideClient+Background.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C491C625CA500A2BD5B /* GlideClient+Background.h */; };
+		3C5D9C4B1C625CA500A2BD5B /* GlideClient+Background.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C491C625CA500A2BD5B /* GlideClient+Background.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C5D9C4C1C625CA500A2BD5B /* GlideClient+Background.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C4A1C625CA500A2BD5B /* GlideClient+Background.m */; };
 		3C5D9C4D1C625CA500A2BD5B /* GlideClient+Background.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C4A1C625CA500A2BD5B /* GlideClient+Background.m */; };
-		3C5D9C501C625D2300A2BD5B /* GlideClient+Border.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C4E1C625D2300A2BD5B /* GlideClient+Border.h */; };
+		3C5D9C501C625D2300A2BD5B /* GlideClient+Border.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C4E1C625D2300A2BD5B /* GlideClient+Border.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C5D9C511C625D2300A2BD5B /* GlideClient+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C4F1C625D2300A2BD5B /* GlideClient+Border.m */; };
 		3C5D9C521C625D2300A2BD5B /* GlideClient+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C4F1C625D2300A2BD5B /* GlideClient+Border.m */; };
-		3C5D9C551C625EAF00A2BD5B /* GlideClient+Encode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C531C625EAF00A2BD5B /* GlideClient+Encode.h */; };
+		3C5D9C551C625EAF00A2BD5B /* GlideClient+Encode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C531C625EAF00A2BD5B /* GlideClient+Encode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C5D9C561C625EAF00A2BD5B /* GlideClient+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C541C625EAF00A2BD5B /* GlideClient+Encode.m */; };
 		3C5D9C571C625EAF00A2BD5B /* GlideClient+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C541C625EAF00A2BD5B /* GlideClient+Encode.m */; };
-		3C772E6B1C6CFD000012332A /* GlideUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C772E691C6CFD000012332A /* GlideUtils.h */; };
+		3C772E6B1C6CFD000012332A /* GlideUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C772E691C6CFD000012332A /* GlideUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C772E6C1C6CFD000012332A /* GlideUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C772E6A1C6CFD000012332A /* GlideUtils.m */; };
 		3C772E6E1C6CFDCF0012332A /* GlideUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C772E6D1C6CFDCF0012332A /* GlideUtilsTests.m */; };
 		3CC2B9C01C6DE396009EDD4D /* GlideClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C191C61269E00A2BD5B /* GlideClient.m */; };
@@ -72,31 +72,31 @@
 		3CC2B9F41C6DE513009EDD4D /* GlideClient+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C541C625EAF00A2BD5B /* GlideClient+Encode.m */; };
 		3CC2B9F51C6DE513009EDD4D /* GlideUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C772E6A1C6CFD000012332A /* GlideUtils.m */; };
 		3CC2B9F61C6DE52A009EDD4D /* Glide.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C011C6125DC00A2BD5B /* Glide.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CC2B9F71C6DE53F009EDD4D /* GlideClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C181C61269E00A2BD5B /* GlideClient.h */; };
-		3CC2B9F81C6DE53F009EDD4D /* GlideClient+Size.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C301C62305D00A2BD5B /* GlideClient+Size.h */; };
-		3CC2B9F91C6DE53F009EDD4D /* GlideClient+Orientation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C261C6214E000A2BD5B /* GlideClient+Orientation.h */; };
-		3CC2B9FA1C6DE53F009EDD4D /* GlideClient+Crop.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C2B1C621C6F00A2BD5B /* GlideClient+Crop.h */; };
-		3CC2B9FB1C6DE53F009EDD4D /* GlideClient+PixelDensity.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C351C624B3900A2BD5B /* GlideClient+PixelDensity.h */; };
-		3CC2B9FC1C6DE53F009EDD4D /* GlideClient+Adjustments.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C3A1C624C9500A2BD5B /* GlideClient+Adjustments.h */; };
-		3CC2B9FD1C6DE53F009EDD4D /* GlideClient+Effects.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C3F1C62506600A2BD5B /* GlideClient+Effects.h */; };
-		3CC2B9FE1C6DE53F009EDD4D /* GlideClient+Watermarks.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C441C62575F00A2BD5B /* GlideClient+Watermarks.h */; };
-		3CC2B9FF1C6DE53F009EDD4D /* GlideClient+Background.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C491C625CA500A2BD5B /* GlideClient+Background.h */; };
-		3CC2BA001C6DE53F009EDD4D /* GlideClient+Border.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C4E1C625D2300A2BD5B /* GlideClient+Border.h */; };
-		3CC2BA011C6DE53F009EDD4D /* GlideClient+Encode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C531C625EAF00A2BD5B /* GlideClient+Encode.h */; };
-		3CC2BA021C6DE53F009EDD4D /* GlideUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C772E691C6CFD000012332A /* GlideUtils.h */; };
+		3CC2B9F71C6DE53F009EDD4D /* GlideClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C181C61269E00A2BD5B /* GlideClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC2B9F81C6DE53F009EDD4D /* GlideClient+Size.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C301C62305D00A2BD5B /* GlideClient+Size.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC2B9F91C6DE53F009EDD4D /* GlideClient+Orientation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C261C6214E000A2BD5B /* GlideClient+Orientation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC2B9FA1C6DE53F009EDD4D /* GlideClient+Crop.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C2B1C621C6F00A2BD5B /* GlideClient+Crop.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC2B9FB1C6DE53F009EDD4D /* GlideClient+PixelDensity.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C351C624B3900A2BD5B /* GlideClient+PixelDensity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC2B9FC1C6DE53F009EDD4D /* GlideClient+Adjustments.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C3A1C624C9500A2BD5B /* GlideClient+Adjustments.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC2B9FD1C6DE53F009EDD4D /* GlideClient+Effects.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C3F1C62506600A2BD5B /* GlideClient+Effects.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC2B9FE1C6DE53F009EDD4D /* GlideClient+Watermarks.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C441C62575F00A2BD5B /* GlideClient+Watermarks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC2B9FF1C6DE53F009EDD4D /* GlideClient+Background.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C491C625CA500A2BD5B /* GlideClient+Background.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC2BA001C6DE53F009EDD4D /* GlideClient+Border.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C4E1C625D2300A2BD5B /* GlideClient+Border.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC2BA011C6DE53F009EDD4D /* GlideClient+Encode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C531C625EAF00A2BD5B /* GlideClient+Encode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC2BA021C6DE53F009EDD4D /* GlideUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C772E691C6CFD000012332A /* GlideUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CC2BA041C6DE587009EDD4D /* Glide.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C011C6125DC00A2BD5B /* Glide.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CC2BA051C6DE599009EDD4D /* GlideClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C181C61269E00A2BD5B /* GlideClient.h */; };
-		3CC2BA061C6DE599009EDD4D /* GlideClient+Size.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C301C62305D00A2BD5B /* GlideClient+Size.h */; };
-		3CC2BA071C6DE599009EDD4D /* GlideClient+Orientation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C261C6214E000A2BD5B /* GlideClient+Orientation.h */; };
-		3CC2BA081C6DE599009EDD4D /* GlideClient+Crop.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C2B1C621C6F00A2BD5B /* GlideClient+Crop.h */; };
-		3CC2BA091C6DE599009EDD4D /* GlideClient+PixelDensity.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C351C624B3900A2BD5B /* GlideClient+PixelDensity.h */; };
-		3CC2BA0A1C6DE599009EDD4D /* GlideClient+Adjustments.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C3A1C624C9500A2BD5B /* GlideClient+Adjustments.h */; };
-		3CC2BA0B1C6DE599009EDD4D /* GlideClient+Effects.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C3F1C62506600A2BD5B /* GlideClient+Effects.h */; };
-		3CC2BA0C1C6DE599009EDD4D /* GlideClient+Watermarks.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C441C62575F00A2BD5B /* GlideClient+Watermarks.h */; };
-		3CC2BA0D1C6DE599009EDD4D /* GlideClient+Background.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C491C625CA500A2BD5B /* GlideClient+Background.h */; };
-		3CC2BA0E1C6DE599009EDD4D /* GlideClient+Border.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C4E1C625D2300A2BD5B /* GlideClient+Border.h */; };
-		3CC2BA0F1C6DE599009EDD4D /* GlideClient+Encode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C531C625EAF00A2BD5B /* GlideClient+Encode.h */; };
-		3CC2BA101C6DE599009EDD4D /* GlideUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C772E691C6CFD000012332A /* GlideUtils.h */; };
+		3CC2BA051C6DE599009EDD4D /* GlideClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C181C61269E00A2BD5B /* GlideClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC2BA061C6DE599009EDD4D /* GlideClient+Size.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C301C62305D00A2BD5B /* GlideClient+Size.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC2BA071C6DE599009EDD4D /* GlideClient+Orientation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C261C6214E000A2BD5B /* GlideClient+Orientation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC2BA081C6DE599009EDD4D /* GlideClient+Crop.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C2B1C621C6F00A2BD5B /* GlideClient+Crop.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC2BA091C6DE599009EDD4D /* GlideClient+PixelDensity.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C351C624B3900A2BD5B /* GlideClient+PixelDensity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC2BA0A1C6DE599009EDD4D /* GlideClient+Adjustments.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C3A1C624C9500A2BD5B /* GlideClient+Adjustments.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC2BA0B1C6DE599009EDD4D /* GlideClient+Effects.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C3F1C62506600A2BD5B /* GlideClient+Effects.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC2BA0C1C6DE599009EDD4D /* GlideClient+Watermarks.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C441C62575F00A2BD5B /* GlideClient+Watermarks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC2BA0D1C6DE599009EDD4D /* GlideClient+Background.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C491C625CA500A2BD5B /* GlideClient+Background.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC2BA0E1C6DE599009EDD4D /* GlideClient+Border.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C4E1C625D2300A2BD5B /* GlideClient+Border.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC2BA0F1C6DE599009EDD4D /* GlideClient+Encode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5D9C531C625EAF00A2BD5B /* GlideClient+Encode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC2BA101C6DE599009EDD4D /* GlideUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C772E691C6CFD000012332A /* GlideUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CC2BA111C6DE5A5009EDD4D /* GlideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D9C0D1C6125DC00A2BD5B /* GlideTests.m */; };
 		3CC2BA121C6DE5A5009EDD4D /* GlideUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C772E6D1C6CFDCF0012332A /* GlideUtilsTests.m */; };
 		3CC2BA131C6DE5A8009EDD4D /* Glide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5D9BFE1C6125DC00A2BD5B /* Glide.framework */; };
@@ -498,7 +498,7 @@
 				};
 			};
 			buildConfigurationList = 3C5D9BF81C6125DC00A2BD5B /* Build configuration list for PBXProject "Glide" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -726,6 +726,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = macosx;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -773,6 +774,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = macosx;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -798,7 +800,12 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Glide/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.etcheverry.Glide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -821,7 +828,12 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Glide/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.etcheverry.Glide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -871,6 +883,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.glide.GlideIOS;
 				PRODUCT_NAME = Glide;
 				SDKROOT = iphoneos;
@@ -895,6 +908,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.glide.GlideIOS;
 				PRODUCT_NAME = Glide;
 				SDKROOT = iphoneos;
@@ -951,6 +965,7 @@
 				INFOPLIST_FILE = Glide/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.glide.GlideTvOS;
 				PRODUCT_NAME = Glide;
 				SDKROOT = appletvos;
@@ -974,6 +989,7 @@
 				INFOPLIST_FILE = Glide/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.glide.GlideTvOS;
 				PRODUCT_NAME = Glide;
 				SDKROOT = appletvos;
@@ -1053,6 +1069,7 @@
 				3CC2B9BC1C6DE37D009EDD4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3CC2B9BD1C6DE37D009EDD4D /* Build configuration list for PBXNativeTarget "GlideIOSTests" */ = {
 			isa = XCConfigurationList;
@@ -1061,6 +1078,7 @@
 				3CC2B9BF1C6DE37D009EDD4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3CC2B9E41C6DE4BE009EDD4D /* Build configuration list for PBXNativeTarget "GlideTvOS" */ = {
 			isa = XCConfigurationList;
@@ -1069,6 +1087,7 @@
 				3CC2B9E61C6DE4BE009EDD4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3CC2B9E71C6DE4BE009EDD4D /* Build configuration list for PBXNativeTarget "GlideTvOSTests" */ = {
 			isa = XCConfigurationList;
@@ -1077,6 +1096,7 @@
 				3CC2B9E91C6DE4BE009EDD4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
