@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
     s.name                      = 'Glide'
-    s.version                   = '1.0.3'
+    s.version                   = '1.0.4'
     s.summary                   = 'Glide client for iOS & Mac OS X'
-    s.author                    = {
+    s.author = {
         'Axel Etcheverry' => 'axel@etcheverry.biz'
     }
-    s.source                    = {
+    s.source = {
         :git => 'https://github.com/euskadi31/glide-objc.git',
         :tag => "v#{s.version}"
     }
