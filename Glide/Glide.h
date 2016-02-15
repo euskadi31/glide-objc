@@ -5,6 +5,7 @@
 //  Created by Axel Etcheverry on 02/02/2016.
 //  Copyright © 2016 Axel Etcheverry. All rights reserved.
 //
+#import <Foundation/Foundation.h>
 
 //! Project version number for Glide.
 FOUNDATION_EXPORT double GlideVersionNumber;

@@ -7,6 +7,7 @@
 //
 
 #import "GlideUtils.h"
+#import <CommonCrypto/CommonDigest.h>
 
 @implementation GlideUtils
 
