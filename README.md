@@ -7,7 +7,7 @@ Glide [![CocoaPods](https://img.shields.io/cocoapods/v/Glide.svg)](https://cocoa
 | develop | [![Build Status](https://travis-ci.org/euskadi31/glide-objc.svg?branch=develop)](https://travis-ci.org/euskadi31/glide-objc) | [![Coverage Status](https://coveralls.io/repos/github/euskadi31/glide-objc/badge.svg?branch=develop)](https://coveralls.io/github/euskadi31/glide-objc?branch=develop) |
 
 
-[http://glide.thephpleague.com/](Glide) client for iOS & Mac OS X
+[Glide](http://glide.thephpleague.com/) client for iOS & Mac OS X
 
 ## Install
 
